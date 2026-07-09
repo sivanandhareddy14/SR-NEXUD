@@ -12088,6 +12088,29 @@ regenerate();
 })();
 
 </script>
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import { getAuth } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+import { getFirestore } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
+const firebaseConfig = {
+  apiKey: "AIzaSyD23cITVvUfOAVaJZIrXJzWDq6mhIbGOvA",
+  authDomain: "fir-r-nexus.firebaseapp.com",
+  projectId: "fir-r-nexus",
+  storageBucket: "fir-r-nexus.firebasestorage.app",
+  messagingSenderId: "1054817074494",
+  appId: "1:1054817074494:web:686c101ec705c0ee4a406f",
+  measurementId: "G-2QBFKY4W08"
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
+
+window.auth = auth;
+window.db = db;
+
+console.log("Firebase Connected Successfully");
+</script>
 </body>
 </html>
